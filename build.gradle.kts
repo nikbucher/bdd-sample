@@ -2,7 +2,7 @@ plugins {
 	java
 }
 
-group = "ch.prelogic.support"
+group = "io.bucher.bddsample"
 version = "1.0-SNAPSHOT"
 
 repositories {
