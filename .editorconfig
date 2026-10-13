@@ -3,16 +3,13 @@
 # top-most EditorConfig file
 root = true
 
-# Unix-style newlines with a newline ending every file
 [*]
 charset = utf-8
-end_of_line = lf
 indent_size = 2
 indent_style = tab
 insert_final_newline = true
 max_line_length = 200
 trim_trailing_whitespace = true
-continuation_indent_size = 4
 
 [*.java]
 ij_java_layout_static_imports_separately = true
@@ -24,12 +21,15 @@ ktlint_code_style = ktlint_official
 ktlint_standard_max-line-length = disabled
 ktlint_standard_no-wildcard-imports = disabled
 
-[*.{json,md,yml,yaml}]
+[*.{json,md,toml,typ,yml,yaml}]
 indent_style = space
-
-[*.{md,xml}]
-max_line_length = 999999
-# max_line_length = off doesn't work in Intellij
 
 [*.md]
 indent_size = 4
+max_line_length = 999999
+# max_line_length = off doesn't work in Intellij
+trim_trailing_whitespace = false
+
+[*.xml]
+max_line_length = 999999
+# max_line_length = off doesn't work in Intellij
