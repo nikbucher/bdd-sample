@@ -3,6 +3,7 @@
 !.gitattributes
 !.gitignore
 !.gitlab-ci.yml
+!.github
 
 /config/
 build/
