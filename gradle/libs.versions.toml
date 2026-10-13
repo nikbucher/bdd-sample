@@ -1,0 +1,13 @@
+[versions]
+cucumber = "7.20.1"
+junit = "5.11.4"
+truth = "1.4.4"
+
+[libraries]
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+junit-platform-suite = { module = "org.junit.platform:junit-platform-suite" }
+cucumber-bom = { module = "io.cucumber:cucumber-bom", version.ref = "cucumber" }
+cucumber-java = { module = "io.cucumber:cucumber-java" }
+cucumber-junit-platform-engine = { module = "io.cucumber:cucumber-junit-platform-engine" }
+truth = { module = "com.google.truth:truth", version.ref = "truth" }

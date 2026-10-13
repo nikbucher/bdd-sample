@@ -5,19 +5,25 @@ plugins {
 group = "io.bucher.bddsample"
 version = "1.0-SNAPSHOT"
 
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(25)
+	}
+}
+
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	testImplementation(platform("org.junit:junit-bom:5.11.4"))
-	testImplementation(platform("io.cucumber:cucumber-bom:7.20.1"))
+	testImplementation(platform(libs.junit.bom))
+	testImplementation(platform(libs.cucumber.bom))
 
-	testImplementation("com.google.truth:truth:1.4.4")
-	testImplementation("io.cucumber:cucumber-java")
-	testImplementation("io.cucumber:cucumber-junit-platform-engine")
-	testImplementation("org.junit.jupiter:junit-jupiter")
-	testImplementation("org.junit.platform:junit-platform-suite")
+	testImplementation(libs.truth)
+	testImplementation(libs.cucumber.java)
+	testImplementation(libs.cucumber.junit.platform.engine)
+	testImplementation(libs.junit.jupiter)
+	testImplementation(libs.junit.platform.suite)
 }
 
 tasks.test {
